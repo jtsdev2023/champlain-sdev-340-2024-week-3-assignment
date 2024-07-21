@@ -8,27 +8,37 @@ Employee::Employee(
     std::string nameFirst, std::string nameLast, int efficiency,
     double salary, const std::vector<std::string>& notes
 ) : nameFirst(nameFirst), nameLast(nameLast), efficiency(efficiency),
-    salary(salary), notes(notes) {}
+    salary(salary), notes(notes) {};
 
 // deconstructor
-Employee::~Employee() {}
+Employee::~Employee() {};
 
 // getters
-std::string Employee::getNameFirst() const { return nameFirst; }
-std::string Employee::getNameLast() const { return nameLast; }
-int Employee::getEfficiency() const { return efficiency; }
-double Employee::getSalary() const { return salary; }
-const std::vector<std::string>& Employee::getNotes() const { return notes; }
+std::string Employee::getNameFirst() const { return nameFirst; };
+std::string Employee::getNameLast() const { return nameLast; };
+int Employee::getEfficiency() const { return efficiency; };
+double Employee::getSalary() const { return salary; };
+const std::vector<std::string>& Employee::getNotes() const { return notes; };
+
+// this is all a result from web search on how to error check efficency rating
+void Employee::setEfficiencyRating(int efficiency) {
+    if (efficiency < 1 || efficiency > 5) {
+        throw std::out_of_range("Employee efficiency rating must be between 1 and 5");
+    };
+
+    this->efficiency = efficiency;
+};
 
 // print values
-void Employee::printValues() const {
+void Employee::printValues() {
+    // check that efficiency is between 1 and 5
+    setEfficiencyRating(efficiency);
+    std::cout << std::endl;
+    std::cout << "Employee Details" << std::endl;
+    std::cout << "----------------" << std::endl;
     std::cout << "First Name: " << nameFirst << std::endl;
     std::cout << "Last Name: " << nameLast << std::endl;
     std::cout << "Efficiency Rating: " << efficiency << std::endl;
-    std::cout << "Salary: " << salary << std::endl;
-    std::cout << "Employee Notes:" << std::endl;
-    for (std::string note : notes) {
-        std::cout << note << "." << std::endl;
-    }
+    std::cout << "Salary: $" << salary << std::endl;
     std::cout << std::endl;
-}
+};

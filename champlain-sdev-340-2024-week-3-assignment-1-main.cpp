@@ -7,7 +7,7 @@
 int main() {
     // create an employee object
     Employee employee(
-        "John", "Doe", 100,
+        "John", "Doe", 15,
         100000, {"lorem ipsum 1", "lorem ipsum 2", "lorem ipsum 3"}
     );
 
