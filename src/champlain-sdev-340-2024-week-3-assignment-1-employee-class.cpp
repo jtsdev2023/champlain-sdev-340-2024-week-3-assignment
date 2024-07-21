@@ -1,6 +1,6 @@
 // champlain-sdev-340-2024-week-3-assignment-1-class.cpp
 
-#include "../include/champlain-sdev-340-2024-week-3-assignment-1-class.h"
+#include "../include/champlain-sdev-340-2024-week-3-assignment-1-employee-class.h"
 
 
 // constructor

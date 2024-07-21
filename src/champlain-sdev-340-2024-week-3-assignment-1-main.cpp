@@ -1,7 +1,8 @@
 // champlain-sdev-340-2024-week-3-assignment-1-main.cpp
 
 
-#include "../include/champlain-sdev-340-2024-week-3-assignment-1-class.h"
+#include "../include/champlain-sdev-340-2024-week-3-assignment-1-employee-class.h"
+#include "../include/champlain-sdev-340-2024-week-3-assignment-1-manager-class.h"
 
 
 int main() {
@@ -22,6 +23,16 @@ int main() {
 
     // print values
     employee2.printValues();
+
+
+    // manager
+    Manager manager1(
+        "Jane", "Doe", 5,
+        300000.00, {"lorem ipsum 1", "lorem ipsum 2", "lorem ipsum 3"},
+        "Manager", "Wet Works"
+    );
+
+    manager1.printValues();
 
     // test 3
     // pass invalid efficiency rating
