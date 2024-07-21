@@ -1,6 +1,6 @@
 // champlain-sdev-340-2024-week-3-assignment-1-class.cpp
 
-#include "champlain-sdev-340-2024-week-3-assignment-1-class.h"
+#include "../include/champlain-sdev-340-2024-week-3-assignment-1-class.h"
 
 
 // constructor
@@ -31,7 +31,7 @@ void Employee::setEfficiencyRating(int efficiency) {
 
 // print values
 void Employee::printValues() {
-    // check that efficiency is between 1 and 5
+    // check that efficiency rating is between 1 and 5
     setEfficiencyRating(efficiency);
     std::cout << std::endl;
     std::cout << "Employee Details" << std::endl;
