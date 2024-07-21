@@ -39,6 +39,8 @@ void Employee::printValues() {
     std::cout << "First Name: " << nameFirst << std::endl;
     std::cout << "Last Name: " << nameLast << std::endl;
     std::cout << "Efficiency Rating: " << efficiency << std::endl;
+    // could not figure out how to implement Python-style string formatting in c++
+    // wanted to write salary using dollar sign and commas
     std::cout << "Salary: $" << salary << std::endl;
     std::cout << std::endl;
 };
