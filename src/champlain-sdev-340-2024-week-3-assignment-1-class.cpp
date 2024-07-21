@@ -18,6 +18,7 @@ std::string Employee::getNameFirst() const { return nameFirst; };
 std::string Employee::getNameLast() const { return nameLast; };
 int Employee::getEfficiency() const { return efficiency; };
 double Employee::getSalary() const { return salary; };
+// vector from STL
 const std::vector<std::string>& Employee::getNotes() const { return notes; };
 
 // this is all a result from web search on how to error check efficency rating
